@@ -14,7 +14,7 @@
 
 - /server/test : test channel
 - /mvp/users/all : Supports GET requests only. Get all users' info (only name is provided so far)
-- /mvp/user : Supporting GET, POST, DELETE request. Only one item will be returned for GET request. Username is required in params for GET & DELETE request. CAUTION: DELETE request will also remove all drug records related to the user
+- /mvp/user : Supports GET, POST, DELETE request. Only one item will be returned for GET request. Username is required in params for GET & DELETE request. CAUTION: DELETE request will also remove all drug records related to the user
 - /mvp/drugs : Supports GET & DELETE request. Getting or deletting all drug records related to a specified user. The username must be provided in params.
 - /mvp/drug : Supports all CRUD requests. The drug name must be provided in params for GET, UPDATE and DELETE request. You can only post one item for each POST request
 
