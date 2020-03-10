@@ -1,18 +1,14 @@
 const express = require("express");
 const bParser = require("body-parser");
 const cors = require("cors");
-// const path = require("path");
 const port = 3000;
 const router = require("./router");
 const db = require('./index.js')
 
-// const firebase = require('../fb/fb-index.js');
-const firebaseMethods = require('../fb/fb-controller.js');
-
 const app = express();
 app.use(bParser.json());
 app.use(bParser.urlencoded({ extended: true }));
-// app.use("/", express.static(path.join(__dirname, "../client/dist")));
+
 app.use(cors());
 app.listen(port, () => {console.log("server online:" + port);});
 

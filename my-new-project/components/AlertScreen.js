@@ -66,4 +66,3 @@ export default class AlertScreen extends Component {
     );
   }
 }
-//hello

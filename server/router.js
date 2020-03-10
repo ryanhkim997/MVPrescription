@@ -65,5 +65,5 @@ router.put('/drug/:name',(req,res)=>{
 router.delete('/drug/:name',(req,res)=>{
   drug.deleteMany({name:req.params.name},(err)=>{lazyFun2(err,res,203)});
 });
-//
+
 module.exports = router;

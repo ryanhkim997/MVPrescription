@@ -3,12 +3,6 @@ const express = require('express');
 const db = require('./fb-index');
 
 const app = express();
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
 
 app.post('/users', (req, res) => {
   const { username, password, firstName, lastName, email } = req.body
@@ -61,17 +55,5 @@ app.get('/users/all', async (req, res) => {
     res.status(400).send('Could not get user information.')
   })
 })
-
-// app.get('/users/', (req, res) => {
-//   const { email } = req.query;
-//   admin.auth().getUserByEmail(email)
-//   .then((userRecord) => {
-//     res.status(200).send(userRecord.toJSON())
-//     console.log('Successfully fetched user data:', userRecord.toJSON());
-//   })
-//   .catch((err) => {
-//    console.log('Error fetching user data:', err);
-//   });
-// })
 
 exports.api = functions.https.onRequest(app)
